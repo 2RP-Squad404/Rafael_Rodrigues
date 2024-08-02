@@ -211,19 +211,26 @@ E por ultimo aprendi um pouco sobre o merge que é, suas vantagens e desvantagen
 - ...
 
 **Principais comandos: (se aplicável)**  
-- [Comando 1]
-- [Comando 2]
-- [Comando 3]
+- git init
+- git checkout -b nome-feature
+- git branch
+- git add .
+- git commit -m "mensagem do commit"
+- git push
+- git pull
+- git clone url 
+- git status
+- git log 
 - ...
 
 **Desafios Encontrados:**  
 Ums dos principais desafios foi a questão da organização das branchs e a forma de extruturar o Relatório.
 
 **Feedback e Ajustes:**  
-Descreva qualquer feedback que você recebeu e como você ajustou sua abordagem de estudo com base nesse feedback.
+Gostei do conteúdo abordado.
 
 **Próximos Passos:**  
-Descreva os próximos passos em sua trilha de aprendizagem. Quais são as próximas etapas ou módulos que você irá abordar?
+Irei continuar meus estudos em Git.
 
 
 
