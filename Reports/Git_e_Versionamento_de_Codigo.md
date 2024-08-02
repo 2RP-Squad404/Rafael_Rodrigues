@@ -9,7 +9,7 @@
 1. **[1/Controle de versão]:** 
 
 - gerencia vários sistemas de trabalho
- ![alt text](image.png)
+ ![alt text](assets/image.png)
  - git armazena como snapshot
  - mantém somente uma cópia do arquivo
  - mantém o estado dos arquivos
@@ -44,13 +44,22 @@ depois de instalar e configurar o git podemos inicializar um repositório.
 
 - com o comando **git init** ele inicia o repositório.
 4. **[1/O ciclo de vida dos status de seus arquivos]**
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 
 ### Untracked
 - Foi criado o repositório mas o git ainda não conhece nenhuma versão desse arquivo.
 
 ### Unmodifield
 - Ele existe no git mas ainda não tem nenhuma alteração.
+
+### Modifield 
+- quando o arquivo é editado, ou seja modificado
+
+### Staged
+- usado para colocar as alterações que devem ser adicionadas no próximo commit
+
+
+
 
 ## Assuntos Vistos
 
