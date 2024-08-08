@@ -83,6 +83,38 @@ O docker cira um novo contêiner, como se você tivesse configurado executado um
   ![Imagem do meu primeiro app em deploy](../assets/first-docker.png)
 
 
+## Começando o projeto
+ clonei o repositório com o comando:
+ ```
+ git clone https://github.com/docker/getting-started-todo-app
+ ```
+
+ - naveguei até a pasta e executei o comando:
+ ```
+ cd getting-started-todo-app
+ ```
+ - Ai com o docker compose eu deixei coloquei meu app para rodar.
+```
+docker compose watch
+```
+
+## O que há no ambiente ?
+- Em um alto nível, há vários contêineres (ou processos) que atendem a uma necessidade específica do aplicativo:
+
+Frontend React - Um contêiner node que está executando o servidor de desenvolvimento React, usando Vite
+
+Backend Node - fornece uma API que fornece a capacidade de recuperar, criar e excluir itens de tarefas.
+
+Banco de dados MySQL - banco de dados para armazenar a lista de itens.
+
+phpMyAdmin - Proxy Traefik - com esse ambiente eu não vou me preocupar em instalar ou configurar nenhum serviço, preencher um esquema de banco de dados.
+
+## Fazendo mudanças no aplicativo
+
+
+
+
+
 4. ...
 
 ## Resumo dos módulos 
