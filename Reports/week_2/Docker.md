@@ -15,29 +15,74 @@ com ele podemos gerenciar nossa infraestrutura da mesma forma que gerenciamos no
 Nos permite empacotar e executar um aplicativo em um ambiente frouxamente isolado chamado cônteiner.
 é isolado e seguro permitindo executar muitos contêineres simultaneamente em um determinado host.
 
-### Caracteristicas dos containers
+## Caracteristicas dos containers
 - Leves e contêm tudo o que é necessário para executar o aplicativo.
 - não depende do que está instalado no host.
-- É compartilhado e mantém que todos recebam o mesmo contâiner que funciona da mesma maneira
+- É compartilhado e mantém que todos recebam o mesmo contêiner que funciona da mesma maneira
 
 ## Diferença de container e maquina virtual 
-- Uma máquina virtual roda em novo Kernel possivelmente uma arquitetura x86 em cima de ARM, já um container reaproveita o mesmo kernel, necessariamente na mesma arquitetura de hardware.
+- Uma máquina virtual roda em novo Kernel possivelmente uma arquitetura x86 em cima de ARM, já um contêiner reaproveita o mesmo kernel, necessariamente na mesma arquitetura de hardware.
 
 
 2. **Para que eu posso usar o Docker**
 - Entrega rápida e consistente de seu aplicativos
 - Simplifica o ciclo de vida do desenvolvimento permitindo que os desenvolvedores trabalhem em ambientes padronizados.
-- Contâiners são ótimos para fluxo de trabalho e integração contínua e entrega contínua (CI/CD)
+- Contêineres são ótimos para fluxo de trabalho e integração contínua e entrega contínua (CI/CD)
 - Quando desenvolvedores encontram bugs, eles podem corrigi-los no ambiente de desenvolvimento e reimplementá-los no ambiente de teste e validação. 
 - O Docker é perfeito para ambientes de alta densidade e para implantações pequenas ou médias onde você precisa fazer mais com menos recursos.
 
 ## Arquitetura Docker
-  
+  ![alt text](../assets/docker-architecture.webp)
+
+- O docker usa uma arquitetura cliente-servidor. O cliente Docker fala com o daemon Docker, que faz o trabalho pesado de construir, executar e distribuir seus contêineres Docker.
+
+## Daemon Docker
+
+- Escuta solicitações da API Docker e gerencia objetos Docker, como imagens, contêiners, redes e volumes.
+- Também se comunica com outros daemons para gerenciar serviços Docker
+
+## Cliente Docker
+- Principal maneira pela qual muitos usuários Docker interagem com o Docker.
+
+## Registros do Docker 
+- Registro armazena imagens do Docker.
+- Docker Hub é um registro público que qualquer pessoa pode usar, e o Docker procurra imagens no Docker Hub por padrão.
+- Posso até mesmo executar meu próprio registro privado.
+
+## Objetos do Docker 
+ - **Imagens:** modelo somente de leitura com instruções para criar um contêiner do Docker.
+ - baseada em outra imagem, com alguma personalização adicional. 
+
+ - **Contêineres:** É uma instância de uma imagem.
+ Posso criar, iniciar, parar, mover ou excluir um contêiner usando a API ou CLI do Docker. Posso conectá-lo a mais redes, anexar armazenamento ou até mesmo criar uma nova imagem com o armazenamento atual.
+Por padrão um contêiner é bem isolado de outros contêineres.
+Um contêiner é definido por sua imagem, quando um contêiner é removido quaisquer alterações que não estejam em seu estado persistente é perdido.
+
+### Exemplo de comando Docker run
+- Comando a seguir executa um contêiner ubuntu, anexa interativamente a sua seção de linha de comando local e executa bin/bash.
+
+```
+docker run -i -t ubuntu /bin/bash
+```
+- executando esse comando se eu não tiver a imagem do Ubunto localmente o Docker puxa seu registro configurado, como se você tivesse executado docker pull ubuntu manualmente. 
+
+O docker cira um novo contêiner, como se você tivesse configurado executado um comando docker contêiner manualmente.
 
 
+3. **2/Começe com o Docker** 
+  Neste exemplo vamos aprender um pouco mais do Docker na prática.
+
+  - Comando para iniciar um Contêiner inicial como exemplo.
+
+  ```
+  docker run -d -p 8080:80 docker/welcome-to-docker
+  ```
+  Ele cria um contêiner onde posso ver algumas informações como logs, exec, files, Inspect, etc.
+
+  - clicando no endereço: http://localhost:8080 eu consigo já ver minha página em deploy.
+  ![Imagem do meu primeiro app em deploy](../assets/first-docker.png)
 
 
-3. **[Módulo/Etapa 3]** 
 4. ...
 
 ## Resumo dos módulos 
