@@ -5,6 +5,8 @@
 
 **Módulos/Etapas Feitas:** 
 
+Referencias: [Docker Containers and Kubernetes Fundamentals – Full Hands-On Course](https://youtu.be/kTp5xUtcalw?si=Bl3Y6OsFM9XE3f8S), [Docker Docs](https://docs.docker.com/guides/docker-concepts/the-basics/what-is-docker-compose/)
+
 1. **01/Visão Geral do Docker**
 
 Plataforma aberta para desenvolver. enviar e executar aplicativos.
@@ -12,10 +14,10 @@ Permite separar aplicativos da infraestrutura para que possamos entregar softwar
 com ele podemos gerenciar nossa infraestrutura da mesma forma que gerenciamos nossos aplicativos.
 
 ## Plataforma Docker
-Nos permite empacotar e executar um aplicativo em um ambiente frouxamente isolado chamado cônteiner.
+Nos permite empacotar e executar um aplicativo em um ambiente frouxamente isolado chamado contêiner.
 é isolado e seguro permitindo executar muitos contêineres simultaneamente em um determinado host.
 
-## Caracteristicas dos containers
+## Caracteristicas dos contêineres
 - Leves e contêm tudo o que é necessário para executar o aplicativo.
 - não depende do que está instalado no host.
 - É compartilhado e mantém que todos recebam o mesmo contêiner que funciona da mesma maneira
@@ -109,11 +111,25 @@ Banco de dados MySQL - banco de dados para armazenar a lista de itens.
 
 phpMyAdmin - Proxy Traefik - com esse ambiente eu não vou me preocupar em instalar ou configurar nenhum serviço, preencher um esquema de banco de dados.
 
-## Fazendo mudanças no aplicativo
+## O que é uma imagem
+- Uma imagem, é padronizada e contém todos os arquivos, bináries, configurar arquivos e outras dependências. 
+- contém tudo que é necessário para rodar o contêiner
+- Uma imagem é imutável
+- pode ser adicionado camadas nelas
+- Evita o famoso ditado "funcionou na minha máquina"
 
+## O que é um registro ?
+- podemos enviar ou extrair imagens
+- exemplo de registros github Contêiner registro, docker hubs, amazon ECR, etc.
+- docker hub disponibiliza um padrão 
+- mantém todos com a mesma configurações nas suas máquinas.
 
-
-
+## O que é o Docker Compose ?
+- Facilita aos desenvolvedores definir e executar aplicativos Docker com vários contêineres.
+- sem o docker compose eu preciso executar vários comandos para configurar meu app.
+- quando digito ```docker compose up -d --build```
+ele gera uma arquivo YAML. Onde posso descrever quais imagens usar ou criar, e como esses contêineres podem se comunicar entre si.
+- quando terminar só digitar ```docker compose down```
 
 4. ...
 
@@ -123,6 +139,23 @@ phpMyAdmin - Proxy Traefik - com esse ambiente eu não vou me preocupar em insta
 
 No dia de Hoje eu iniciei os estudos de Docker, entendi um pouco sobre os contâiners o que o Docker oferece de bom comparado a outras formas de deploy de aplicações por ser rápido e leve.
 Com o Docker podemos fazer entregas contínuas de softwares, ele é seguro e isolado permitindo executar vários côntainers simultaneamente em um determinado host.
+
+Hoje dia 08/09/2024 aprendi um pouco mais sobre os contêineres, as imagens do docker e pratiquei um pouco.
+
+## Comandos Docker
+- docker info
+- docker version
+- docker login
+
+![alt text](../assets/comandos-docker.png)
+
+![alt text](../assets/comandos-docker01.png)
+
+![alt text](../assets/comandos-docker02.png)
+
+![alt text](../assets/comando-docker03.png)
+
+![alt text](../assets/comandos-docker04.png)
 
 ## Links de Laboratórios (se houver)
 
@@ -136,17 +169,11 @@ Com o Docker podemos fazer entregas contínuas de softwares, ele é seguro e iso
 - [Recurso 3]
 - ...
 
-**Principais comandos: (se aplicável)**  
-- [Comando 1]
-- [Comando 2]
-- [Comando 3]
-- ...
-
 **Desafios Encontrados:**  
-Descreva quaisquer desafios ou obstáculos que você encontrou durante a trilha de aprendizagem e como você os superou ou planeja superá-los.
+Problemas com a falta de internet.
 
 **Feedback e Ajustes:**  
-Descreva qualquer feedback que você recebeu e como você ajustou sua abordagem de estudo com base nesse feedback.
+Gostei do conteúdo da trilha.
 
 **Próximos Passos:**  
-Descreva os próximos passos em sua trilha de aprendizagem. Quais são as próximas etapas ou módulos que você irá abordar?
+Vou continuar meus estudos em Docker.
